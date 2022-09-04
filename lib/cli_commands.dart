@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'src/localization_load_sentences.dart';
 
 void generateStaticDeclareClass(Map<String, dynamic> config) async {
@@ -9,7 +8,7 @@ void generateStaticDeclareClass(Map<String, dynamic> config) async {
   final destClassName = destination['classname'];
 
   print("Generate Start.");
-  print("sources: ${sources.join(",")}");
+  print("sources: `${sources.join(",")}`");
   print("destination path: `$destPath` classname: `$destClassName`");
 
   final sentences = <String, String>{};
