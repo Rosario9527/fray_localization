@@ -44,8 +44,6 @@ class LocalizationService {
     }
 
     final value = _sentences[key]!;
-    print("i18n read $key $value");
-
     return LocalizationDefaultReplace.replace(key, value, arguments);
   }
 
