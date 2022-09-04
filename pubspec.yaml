@@ -1,14 +1,15 @@
-name: localization
+name: fray_localization
 description: Package to simplify the package translation.
-version: 2.1.0
-homepage: https://github.com/Flutterando/localization
+version: 1.0.0
+homepage: https://github.com/Rosario9527/fray_localization
 
 environment:
-  sdk: ">=2.13.0 <3.0.0"
+  sdk: ">=2.13.0 <3.3.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  yaml: ^3.1.1
 
 dev_dependencies:
   flutter_test:
