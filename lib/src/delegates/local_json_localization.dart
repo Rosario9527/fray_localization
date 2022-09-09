@@ -10,6 +10,10 @@ List<String> defaultLocateFiles(Locale locale) {
 class LocalJsonLocalization extends LocalizationsDelegate {
   LocateFilesFunc locateFiles = defaultLocateFiles;
 
+  Locale? systemLocale;
+  Locale? _locale; //当前locale
+  Locale? get locale => _locale;
+
   bool showDebugPrintMode = true;
   LocalJsonLocalization._();
 
@@ -22,6 +26,7 @@ class LocalJsonLocalization extends LocalizationsDelegate {
   Future<dynamic> load(Locale locale) async {
     LocalizationService.instance.showDebugPrintMode = showDebugPrintMode;
     await LocalizationService.instance.changeLanguage(locale, locateFiles);
+    _locale = locale;
   }
 
   @override
